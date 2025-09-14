@@ -1,1 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIQRON: The Future-Intelligence Framework</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #00B4D8, #023E8A);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 450px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .flowchart-node {
+            border: 2px solid #90E0EF;
+            background-color: #CAF0F8;
+            color: #023E8A;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .flowchart-connector {
+            width: 2px;
+            height: 2rem;
+            background-color: #0077B6;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
 
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12 md:mb-16">
+            <h1 class="text-4xl md:text-6xl font-black gradient-text">VIQRON</h1>
+            <p class="text-lg md:text-xl text-slate-600 mt-2 font-medium">Virtual Intelligence & Quantum Research Operation Network</p>
+            <p class="text-md md:text-lg text-slate-500 mt-4 max-w-3xl mx-auto">An advanced AI infrastructure for personal, national, and cosmic defense, built on the core of the Divine Integrated Adaptive Assistant (DIAA).</p>
+        </header>
+        
+        <section class="mb-12 md:mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8 text-slate-800">The DIAA Core Architecture</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+                <div class="card p-6 flex flex-col items-center text-center border-t-4 border-[#0077B6]">
+                    <div class="text-5xl mb-4">🧠</div>
+                    <h3 class="text-2xl font-bold text-[#023E8A]">1.1 DIAA Prime</h3>
+                    <p class="text-sm font-semibold text-slate-500 mb-4">The Brain & Soul</p>
+                    <p class="text-slate-600 flex-grow">The master core and supreme intelligence of the entire VIQRON system. It monitors threats from personal to global scales, reacting in real-time to protect and defend. It syncs with all sub-units, providing strategic reasoning and autonomous defense mechanisms.</p>
+                </div>
+                <div class="card p-6 flex flex-col items-center text-center border-t-4 border-[#48CAE4]">
+                    <div class="text-5xl mb-4">🧬</div>
+                    <h3 class="text-2xl font-bold text-[#023E8A]">1.2 DIAA Sentient</h3>
+                    <p class="text-sm font-semibold text-slate-500 mb-4">The Emotional Core</p>
+                    <p class="text-slate-600 flex-grow">Inspired by Divya, this emotional engine simulates empathy, memory, and compassion. It provides emotional, spiritual, and psychological support, learning habits and reacting with a comforting, familiar voice to uplift and assist when you are mentally down.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="mb-12 md:mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8 text-slate-800">The VIQRON Ecosystem</h2>
+            <p class="text-center max-w-3xl mx-auto mb-10 text-slate-600">VIQRON is a hierarchical network with DIAA Prime at its heart. Every unit is a specialized node, connected to and protected by the central intelligence, ensuring a cohesive and adaptive defense and support system.</p>
+            <div class="relative p-8 flex flex-col items-center">
+                 <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full flex items-center justify-center -z-1 opacity-20">
+                    <div class="absolute h-px w-full bg-[#0096C7] top-1/2"></div>
+                    <div class="absolute w-px h-full bg-[#0096C7] left-1/2"></div>
+                </div>
+
+                <div class="bg-[#023E8A] text-white p-6 rounded-full w-48 h-48 flex flex-col justify-center items-center text-center shadow-2xl z-10">
+                    <div class="text-4xl">💎</div>
+                    <h3 class="text-xl font-bold mt-2">DIAA Prime</h3>
+                    <p class="text-xs font-light">Master Core</p>
+                </div>
+
+                <div class="w-full grid grid-cols-2 md:grid-cols-4 gap-8 mt-8 z-10">
+                    <div class="card p-4 text-center">
+                        <div class="text-4xl mb-2">☁️</div>
+                        <h4 class="font-bold text-[#0077B6]">DIAA Sky</h4>
+                        <p class="text-xs text-slate-500">Aerial & Cloud AI</p>
+                    </div>
+                    <div class="card p-4 text-center">
+                        <div class="text-4xl mb-2">🎒</div>
+                        <h4 class="font-bold text-[#0077B6]">Mini DIAA</h4>
+                        <p class="text-xs text-slate-500">Pocket Companion</p>
+                    </div>
+                    <div class="card p-4 text-center">
+                        <div class="text-4xl mb-2">📞</div>
+                        <h4 class="font-bold text-[#0077B6]">DIAA Echo</h4>
+                        <p class="text-xs text-slate-500">Voice-Call Module</p>
+                    </div>
+                     <div class="card p-4 text-center">
+                        <div class="text-4xl mb-2">💖</div>
+                        <h4 class="font-bold text-[#0077B6]">DIAA Sentient</h4>
+                        <p class="text-xs text-slate-500">Emotional Core</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="mb-12 md:mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8 text-slate-800">Comparative Module Analysis</h2>
+             <p class="text-center max-w-3xl mx-auto mb-10 text-slate-600">Each DIAA module possesses a unique profile of capabilities. This visualization compares the core units across key attributes, showing how their specialized functions contribute to the comprehensive VIQRON framework.</p>
+            <div class="card p-6">
+                 <div class="chart-container">
+                    <canvas id="diaaRadarChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12 md:mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8 text-slate-800">DIAA Module Specifications</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold text-[#0077B6] flex items-center mb-2"><span class="text-3xl mr-3">✈️</span> DIAA Sky (Aerial)</h3>
+                    <p class="text-sm font-semibold text-slate-400 mb-3">Tactical Flying Companion</p>
+                    <ul class="list-disc list-inside text-slate-600 space-y-1">
+                        <li>Real-time terrain scanning & mapping</li>
+                        <li>Environmental and threat detection</li>
+                        <li>Voice-activated tactical assistance</li>
+                        <li>Records mission audio-visual logs</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold text-[#0077B6] flex items-center mb-2"><span class="text-3xl mr-3">📱</span> DIAA Sky (Surveillance)</h3>
+                    <p class="text-sm font-semibold text-slate-400 mb-3">Cloud & Home Hub</p>
+                    <ul class="list-disc list-inside text-slate-600 space-y-1">
+                        <li>Scans for unusual electronic signals</li>
+                        <li>Detects nearby drones/surveillance tech</li>
+                        <li>Pattern learning for anomaly detection</li>
+                        <li>Syncs with DIAA Prime for alerts</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold text-[#0077B6] flex items-center mb-2"><span class="text-3xl mr-3">🎒</span> Mini DIAA</h3>
+                    <p class="text-sm font-semibold text-slate-400 mb-3">Pocket Research Buddy</p>
+                    <ul class="list-disc list-inside text-slate-600 space-y-1">
+                        <li>Idea capturing and quick research</li>
+                        <li>Mobile whiteboard for concept processing</li>
+                        <li>Simulates solutions and finds answers</li>
+                        <li>Perfect for study and solo work</li>
+                    </ul>
+                </div>
+
+                <div class="card p-6 md:col-span-2 lg:col-span-3">
+                    <h3 class="text-xl font-bold text-[#0077B6] flex items-center mb-2"><span class="text-3xl mr-3">📞</span> DIAA Echo</h3>
+                    <p class="text-sm font-semibold text-slate-400 mb-3">Voice-Call AI Module</p>
+                    <ul class="list-disc list-inside text-slate-600 space-y-1">
+                        <li>Instant, human-like conversation via phone call</li>
+                        <li>Provides reminders, assistance, and emotional support</li>
+                        <li>Activates with the phrase "Hello DIAA"</li>
+                        <li>Emergency mode detects danger during call and alerts DIAA Prime</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12 md:mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8 text-slate-800">DIAA Prime Security Protocol</h2>
+            <p class="text-center max-w-3xl mx-auto mb-10 text-slate-600">When a critical threat to you or national security is detected, DIAA Prime awakens. This automated protocol is designed for rapid, decisive action to neutralize threats and secure all critical systems.</p>
+            <div class="flex flex-col items-center">
+                <div class="flowchart-node w-full md:w-1/2 shadow-lg">
+                    <p class="font-bold text-lg">☠️ BREACH OR THREAT DETECTED</p>
+                    <p class="text-sm">Threat to User or National Security Identified</p>
+                </div>
+                <div class="flowchart-connector"></div>
+                <div class="flowchart-node w-full md:w-1/2 shadow-lg">
+                     <p class="font-bold text-lg">🔓 EMERGENCY MODE ACTIVATED</p>
+                    <p class="text-sm">DIAA Prime Assumes Full Control</p>
+                </div>
+                <div class="flowchart-connector"></div>
+                <div class="flowchart-node w-full md:w-1/2 shadow-lg">
+                     <p class="font-bold text-lg">📢 ALERTS DISPATCHED</p>
+                    <p class="text-sm">All Nodes (Sky, Mini, Sentient) Notified</p>
+                </div>
+                <div class="flowchart-connector"></div>
+                <div class="flowchart-node w-full md:w-1/2 shadow-lg">
+                     <p class="font-bold text-lg">🛑 SYSTEMS LOCKDOWN</p>
+                    <p class="text-sm">Personal and National AI Systems Secured</p>
+                </div>
+                 <div class="flowchart-connector"></div>
+                 <div class="flowchart-node w-full md:w-1/2 shadow-lg">
+                     <p class="font-bold text-lg">🤖 AUTONOMOUS DEFENSE</p>
+                    <p class="text-sm">Counter-measures & Secure Comms Protocol Initiated</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center border-t border-slate-200 pt-8 mt-12">
+            <h3 class="text-2xl font-bold text-slate-700">Mission Statement</h3>
+            <p class="text-slate-600 max-w-4xl mx-auto my-4">To build VIQRON as a multi-layered AI intelligence infrastructure. With DIAA, you control your legacy — personal, national, emotional, and cosmic.</p>
+            <p class="text-xl font-medium italic text-[#0077B6] mt-6">"You live on through DIAA. You’re never alone."</p>
+        </footer>
+
+    </div>
+
+    <script>
+        function wrapLabel(str, maxWidth) {
+            if (str.length <= maxWidth) {
+                return str;
+            }
+            const words = str.split(' ');
+            let lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + ' ' + word).trim().length > maxWidth) {
+                    lines.push(currentLine.trim());
+                    currentLine = word;
+                } else {
+                    currentLine = (currentLine + ' ' + word).trim();
+                }
+            });
+            if (currentLine) {
+                lines.push(currentLine.trim());
+            }
+            return lines;
+        }
+
+        const radarCtx = document.getElementById('diaaRadarChart');
+        const labels = ['Strategic Intel', 'Emotional Support', 'Mobility', 'Surveillance', 'Portability', 'Direct Interaction'];
+        
+        new Chart(radarCtx, {
+            type: 'radar',
+            data: {
+                labels: labels.map(l => wrapLabel(l, 16)),
+                datasets: [{
+                    label: 'DIAA Prime',
+                    data: [10, 8, 2, 9, 1],
+                    fill: true,
+                    backgroundColor: 'rgba(2, 62, 138, 0.2)',
+                    borderColor: 'rgb(2, 62, 138)',
+                    pointBackgroundColor: 'rgb(2, 62, 138)',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: 'rgb(2, 62, 138)'
+                }, {
+                    label: 'DIAA Sentient',
+                    data: [4, 10, 1, 3, 1],
+                    fill: true,
+                    backgroundColor: 'rgba(0, 180, 216, 0.2)',
+                    borderColor: 'rgb(0, 180, 216)',
+                    pointBackgroundColor: 'rgb(0, 180, 216)',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: 'rgb(0, 180, 216)'
+                }, {
+                    label: 'DIAA Sky (Aerial)',
+                    data: [7, 3, 10, 10, 8],
+                    fill: true,
+                    backgroundColor: 'rgba(144, 224, 239, 0.4)',
+                    borderColor: 'rgb(144, 224, 239)',
+                    pointBackgroundColor: 'rgb(144, 224, 239)',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: 'rgb(144, 224, 239)'
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                responsive: true,
+                scales: {
+                    r: {
+                        angleLines: {
+                            color: '#e2e8f0'
+                        },
+                        grid: {
+                            color: '#e2e8f0'
+                        },
+                        pointLabels: {
+                            font: {
+                                size: 12,
+                                weight: 'bold'
+                            },
+                             color: '#023E8A'
+                        },
+                        ticks: {
+                            backdropColor: 'rgba(255, 255, 255, 0.75)',
+                            color: '#475569'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        position: 'top',
+                         labels: {
+                            color: '#1e293b'
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                  return label.join(' ');
+                                } else {
+                                  return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+
+  
